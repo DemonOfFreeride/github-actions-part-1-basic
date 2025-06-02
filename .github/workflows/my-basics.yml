@@ -50,7 +50,7 @@ jobs:
       - name: Print env vars
         run : |
           echo "Var1 = $VAR_1"
-          echo "Var2 = ${{ env.VAR_2 }}"
+          echo "Var2 = $VAR_2"
           echo "Var3 = $LOCAL_VAR"
         env:
           LOCAL_VAR: "Surep local raviable"
