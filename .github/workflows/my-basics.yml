@@ -6,7 +6,7 @@
 name: My-GitHub-Actions-Basics
 env:
   APPLICATION_NAME   : "MyCombo"
-  DEPLOY_PACAGE_NAME : "Combo_deploy_ver_${{ github.sha }}"
+  DEPLOY_PACKAGE_NAME : "Combo_deploy_ver_${{ github.sha }}"
   
 on: 
   push:
@@ -49,14 +49,14 @@ jobs:
 
       - name: Print env vars
         run : |
-          echo "Var1 = ${{ env.VAR_1 }}"
+          echo "Var1 = $VAR_1"
           echo "Var2 = ${{ env.VAR_2 }}"
           echo "Var3 = $LOCAL_VAR"
         env:
           LOCAL_VAR: "Surep local raviable"
 
       - name: Printing Deployment package
-        run : echo "Deploy package is ${{ env.DEPLOY_PACAGE_NAME }}"
+        run : echo "Deploy package is ${{ env.DEPLOY_PACKAGE_NAME }}"
 
       - name: Lest test some packages if they are here 1
         run : aws --version
