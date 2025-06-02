@@ -30,6 +30,11 @@ jobs:
       - name: List current folder
         run : ls -la 
 
+      - name: Git clone my repo
+        uses: action/checkout@v1 
+
+      - name: List current folder
+        run : ls -la 
 
   my_deploy:
     runs-on: ubuntu-latest 
@@ -42,6 +47,10 @@ jobs:
       - name: Printing Deployment package
         run : echo "Deploy package is ${{ env.DEPLOY_PACAGE_NAME }}"
 
+      - name: Lest test some packages if they are here 1
+        run : aws --version
 
+      - name: Lest test some packages if they are here 2
+        run : zip
   
   
