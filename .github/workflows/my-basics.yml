@@ -48,9 +48,9 @@ jobs:
         run : echo "Hello Yopta from deploy job!" 
 
       - name: Print env vars
-        run : 
-          echo "Var1 = ${ env.VAR_1 }"
-          echo "Var2 = ${ env.VAR_2 }"
+        run : |
+          echo "Var1 = ${{ env.VAR_1 }}"
+          echo "Var2 = ${{ env.VAR_2 }}"
           echo "Var3 = $LOCAL_VAR"
         env:
           LOCAL_VAR: "Surep local raviable"
